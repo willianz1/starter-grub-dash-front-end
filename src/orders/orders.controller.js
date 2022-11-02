@@ -7,7 +7,7 @@ const orders = require(path.resolve("src/data/orders-data"));
 // Use this function to assign IDs when necessary
 const nextId = require("../utils/nextId");
 
-// Check if order exists
+// <<------- VALIDATION ------->>
 function orderExists(request, response, next) {
   const { orderId } = request.params;
   const foundOrder = orders.find((order) => order.id === orderId);
@@ -188,7 +188,8 @@ function update(request, response, next) {
 
   response.json({ data: order });
 }
-// DELETES    /orders/:#
+// DELETE
+// DELETE /orders/:orderId
 function destroy(request, response, next) {
   const { orderId } = request.params;
   const index = orders.findIndex((order) => order.id === orderId);
