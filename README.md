@@ -1,4 +1,4 @@
-# GrubDash Front End Application
+# GrubDash Back End Application
 
 ## Installation
 
@@ -10,3 +10,5 @@ Use `npm start` to run the application.
 Set the `API_BASE_URL` environment variable to the base url for the API.
 
 If `API_BASE_URL` is not set, a default value of `http://localhost:5000` is used.
+
+Currently have the backend version of the grub Dash working. 
